@@ -18,11 +18,28 @@ namespace Calculadora.VISTA
     /// <summary>
     /// Lógica de interacción para Calculadora.xaml
     /// </summary>
-    public partial class Calculadora
+    public partial class Calculadora : Window
     {
+
+        String resultado;
         public Calculadora()
         {
             InitializeComponent();
+            
+
+            btnAC.Click += BtnAC_Click;
+            
+
+        }
+
+        private void BtnAC_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void botonMenos_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

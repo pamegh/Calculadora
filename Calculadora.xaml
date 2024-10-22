@@ -24,7 +24,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <Label x:Name="btnContador" Grid.Column="3" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="72"/>
+        <Label x:Name="labelContador" Grid.Column="3" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="72"/>
         <Button x:Name="btnAC" Content="AC" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1"/>
         <Button x:Name="btnMas" Grid.Column="2" Content="+" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Margin="0,0,82,0" Grid.ColumnSpan="2"/>
         <Button x:Name="btnMenos" Grid.Column="3" Content="-" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82"/>
