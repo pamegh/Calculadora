@@ -23,31 +23,38 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <Label x:Name="labelContador" Grid.Column="3" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="72"/>
-        <Button x:Name="btnAC" Content="AC" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1"/>
-        <Button x:Name="btnMas" Grid.Column="2" Content="+" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Margin="0,0,82,0" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnMenos" Grid.Column="3" Content="-" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82"/>
-        <Button x:Name="btnA" Content="A" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82"/>
-        <Button x:Name="btnB" Content="B" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="70" Width="82"/>
-        <Button x:Name="btnC" Content="C" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82"/>
-        <Button x:Name="btnD" Content="D" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82"/>
-        <Button x:Name="btnE" Content="E" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82"/>
-        <Button x:Name="btnF" Content="F" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1"/>
-        <Button x:Name="btn7" Content="7" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1"/>
-        <Button x:Name="btn0" Content="0" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2"/>
-        <Button x:Name="btn_" Content="=" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3" RenderTransformOrigin="1.576,0.405"/>
-        <Button x:Name="btn1" Content="1" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1"/>
-        <Button x:Name="btn2" Content="2" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2"/>
-        <Button x:Name="btn3" Content="3" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3"/>
-        <Button x:Name="btn4" Content="4" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1"/>
-        <Button x:Name="btn5" Content="5" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2"/>
-        <Button x:Name="btn6" Content="6" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3"/>
-        <Button x:Name="btn8" Content="8" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2"/>
-        <Button x:Name="btn9" Content="9" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3"/>
+
+        <TextBox x:Name="txtContador" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="48" IsReadOnly="True" Text="0" Width="193" Grid.ColumnSpan="3" Margin="44,56,0,0" FontWeight="Bold"/>
+
+        <Button x:Name="btnAC" Content="AC" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1" Click="BtnClear_Click"/>
+        <Button x:Name="btnMas" Grid.Column="2" Content="+" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Margin="0,0,82,0" Grid.ColumnSpan="2" Width="82" Click="BtnSuma_Click"/>
+        <Button x:Name="btnMenos" Grid.Column="3" Content="-" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Click="BtnResta_Click"/>
+
+        <Button x:Name="btnA" Content="A" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btnB" Content="B" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btnC" Content="C" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btnD" Content="D" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btnE" Content="E" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btnF" Content="F" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn7" Content="7" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn0" Content="0" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btnResult" Content="=" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3" RenderTransformOrigin="1.576,0.405" Click="BtnIgual_Click"/>
+        <Button x:Name="btn1" Content="1" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn2" Content="2" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn3" Content="3" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn4" Content="4" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="1" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn5" Content="5" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn6" Content="6" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn8" Content="8" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="2" Click="BtnNumberOrLetter_Click"/>
+        <Button x:Name="btn9" Content="9" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontFamily="Arial" FontSize="48" Height="69" Width="82" Grid.Column="3" Click="BtnNumberOrLetter_Click"/>
 
 
+        <CheckBox x:Name="chkBin" Content="Bin" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"  Height="20" Width="82" Margin="10,26,0,0" Grid.ColumnSpan="2" Checked="ChkBase_Checked"/>
+        <CheckBox x:Name="chkHex" Content="Hex" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"  Height="20" Width="140" Margin="10,46,0,0" Grid.ColumnSpan="2" Checked="ChkBase_Checked"/>
+        <CheckBox x:Name="chkOct" Content="Oct" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"  Height="20" Width="82" Margin="10,66,0,0" Grid.ColumnSpan="2" Checked="ChkBase_Checked"/>
+        <CheckBox x:Name="chkDec" Content="Dec" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"  Height="20" Width="101" Margin="10,86,0,0" Grid.ColumnSpan="2" Checked="ChkBase_Checked"/>
 
+        <TextBlock Text="Selecciona la conversión" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,2,0,0" FontFamily="Arial" FontSize="14" Grid.ColumnSpan="3" Width="164"/>
 
     </Grid>
 </Window>
